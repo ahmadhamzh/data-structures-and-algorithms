@@ -26,7 +26,6 @@ const addExclamation = (arr) => {
   let arrAddExclamation = []
   arr.forEach(element => {arrAddExclamation.push(element+'!')});
   return arrAddExclamation
-
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -54,7 +53,7 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  return newWord = word.toUpperCase()+'!'
+  return word.toUpperCase()+'!'
 };
 
 const speaker = (words, greeting) => {
@@ -110,14 +109,13 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
- let inventory =  [];
+  let inventory =  [];
   availableItems.forEach(element => {
     if (element.available) {
-      inventory.push(element.name)
-      
+      inventory.push(element.name)      
     }
-    return inventory;
   })
+  return inventory;
 };
 
 /* ------------------------------------------------------------------------------------------------
