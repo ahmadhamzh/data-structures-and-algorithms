@@ -43,9 +43,9 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 ------------------------------------------------------------------------------------------------ */
 
 const appendTheEnd = (str) => {
-  let newStr = str
-  newStr = str+' the end.'
-  return newStr
+  let newStr = str;
+  newStr += ' The end.';
+  return newStr ;
 };
 
 /* ------------------------------------------------------------------------------------------------
