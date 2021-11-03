@@ -1,4 +1,4 @@
-# Aray-Insert-Shift 
+# array-binary-search 
 
 ### Write a function called array-binary-search
  which takes in an array and a key the function
