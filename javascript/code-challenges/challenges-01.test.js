@@ -21,7 +21,11 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 ------------------------------------------------------------------------------------------------ */
 
 const addExclamation = (arr) => {
-  // Solution code here...
+
+  let arrAddExclamation = []
+  arr.forEach(element => {arrAddExclamation.push(element+'!')});
+  return arrAddExclamation
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -47,7 +51,9 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  // Solution code here...
+
+  return word.toUpperCase()+'!'
+
 };
 
 const speaker = (words, callback) => {
@@ -97,7 +103,15 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+
+  let inventory =  [];
+  availableItems.forEach(element => {
+    if (element.available) {
+      inventory.push(element.name)      
+    }
+  })
+  return inventory;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
