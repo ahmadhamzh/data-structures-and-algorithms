@@ -5,4 +5,4 @@
 | 01 | [reverse-array](reverse-array/readme.md)
 | 02 | [Array-Insert-Shift](array-insert-shift/readme.md) |
 | 03 | [array-binary-search](array-binary-search/readme.md)
-
+| 03 | [linked-list](https://github.com/ahmadhamzh/data-structures-and-algorithms/pull/6)
