@@ -4,11 +4,13 @@ const Linkedlist = require('./lib/Linkedlist')
 
 const ll = new Linkedlist();
 
-ll.insert('ahmad');
-ll.insert('mohammed');    
-ll.insert('hamzh');    
-ll.insert(6);    
-ll.insert(7);    
+ll.append('ahmad');
+ll.append('mohammed');    
+ll.append('hamzh');    
+ll.append(6);    
+ll.append(7);    
+ll.insertafter('mohammed','ibrahim')
+// ll.insertBefore(6,4)
 
 
 console.log(ll);
