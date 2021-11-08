@@ -4,8 +4,8 @@ const Node = require('./Node')
 class Linkedlist {
     constructor(value) {
         this.head = null,
-            this.tail = null
-
+            this.tail = null,
+            this.length = 0
     }
 
     append(value) {
@@ -14,11 +14,13 @@ class Linkedlist {
         if (!this.head) {
             this.head = newNode
             this.tail = this.head
+            this.length++
             return this;
         } else {
-            const newNode = new Node(value);
+            // const newNode = new Node(value);
             this.tail.next = newNode;
             this.tail = newNode;
+            this.length++
         }
         return this;
 
@@ -63,20 +65,20 @@ class Linkedlist {
 
     }
 
-    insertBefore(value, newValue) {        
-        
-        let currentNode = this.head;
+    insertBefore(value, newValue) {
+
+        let currentNode = this.head
         while (currentNode.next) {
-            console.log(currentNode.value);
-            if (currentNode.value === value) {
+            if (currentNode.next.value === value) {
                 const newNode = new Node(newValue);
-                currentNode = newNode;
-                currentNode.next = currentNode;
-                console.log(currentNode);
-                break ;
+                newNode.next = currentNode.next;
+                currentNode.next = newNode;
+                this.length++
+                return true
             }
             currentNode = currentNode.next
         }
+
     }
 
     insertafter(value, newValue) {
@@ -86,11 +88,30 @@ class Linkedlist {
                 const newNode = new Node(newValue);
                 newNode.next = currentNode.next;
                 currentNode.next = newNode;
+                this.length++
 
             }
             currentNode = currentNode.next
         }
     }
+
+    kthFromEnd(k) {
+        if (k >= this.length || k < 0) {
+            return 'Exception'
+        } else {
+            let counter = (this.length - 1) - k
+            let currentNode = this.head
+            for (let i = 0; i <= counter; i++) {
+               if (i === counter) {
+                   return currentNode.value
+               }else{
+                currentNode = currentNode.next
+               }                
+            }
+        }
+    }
+
+
 }
 
 

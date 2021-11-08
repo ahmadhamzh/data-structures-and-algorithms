@@ -82,4 +82,80 @@ describe('linkedlist checking', () => {
 
     })
 
+    test('CAN ADD NODE befor SPECIFIC NODE', () => {
+
+        const ll = new Linkedlist()
+        ll.append('ahmad')
+        ll.append('mohammed')
+        ll.append('hamzh')
+        ll.insertBefore('hamzh','ibrahim')
+        expect(ll.toString()).toEqual('{ahmad} -> {mohammed} -> {ibrahim} -> {hamzh} -> {null} ')
+
+    })
+    
+    test('Where k is greater than the length of the linked list', () => {
+
+        const ll = new Linkedlist()
+        ll.append('0')
+        ll.append('1')
+        ll.append('2')
+        ll.append('3')
+        
+        expect(ll.kthFromEnd(6)).toEqual('Exception')
+
+    })
+    
+    test('Where k and the length of the list are the same', () => {
+
+        const ll = new Linkedlist()
+        ll.append('0')
+        ll.append('1')
+        ll.append('2')
+        ll.append('3')
+        
+        expect(ll.kthFromEnd(4)).toEqual('Exception')
+
+    })
+    
+    test('Where k is not a positive integer', () => {
+
+        const ll = new Linkedlist()
+        ll.append('0')
+        ll.append('1')
+        ll.append('2')
+        ll.append('3')
+        
+        expect(ll.kthFromEnd(-3)).toEqual('Exception')
+
+    })
+    
+    test('Where the linked list is of a size 1', () => {
+
+        const ll = new Linkedlist()
+        ll.append('0')
+        ll.append('1')
+        ll.append('2')
+        ll.append('3')
+        
+        expect(ll.kthFromEnd(1)).toEqual('2')
+
+    })
+    
+    test('where k is not at the end, but somewhere in the middle of the linked list', () => {
+
+        const ll = new Linkedlist()
+        ll.append('0')
+        ll.append('1')
+        ll.append('2')
+        ll.append('3')
+        ll.append('4')
+        
+        expect(ll.kthFromEnd(2)).toEqual('2')
+
+    })
+
+
+
+
+
 })

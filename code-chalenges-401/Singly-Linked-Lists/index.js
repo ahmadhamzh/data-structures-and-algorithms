@@ -10,9 +10,11 @@ ll.append('hamzh');
 ll.append(6);    
 ll.append(7);    
 ll.insertafter('mohammed','ibrahim')
-// ll.insertBefore(6,4)
+ll.insertBefore(6,4)
+console.log(ll.length);
 
 
 console.log(ll);
 console.log(ll.includes(6));
 console.log(ll.toString());
+console.log(ll.kthFromEnd(3));
