@@ -102,18 +102,45 @@ class Linkedlist {
             let counter = (this.length - 1) - k
             let currentNode = this.head
             for (let i = 0; i <= counter; i++) {
-               if (i === counter) {
-                   return currentNode.value
-               }else{
-                currentNode = currentNode.next
-               }                
+                if (i === counter) {
+                    return currentNode.value
+                } else {
+                    currentNode = currentNode.next
+                }
             }
         }
     }
 
-
+    zipLists(list1, list2) {
+        if (!list1.head) {
+            return list2
+        }
+        if (!list2.head) {
+            return list1
+        }
+        let currentNodeOne = list1.head
+        let currentNodetow = list2.head
+        if (list1.length >= list2.length) {
+            for (let i = 0; i < list1.length; i++) {
+                this.append(currentNodeOne.value)
+                currentNodeOne = currentNodeOne.next
+                if (i < list2.length) {
+                    this.append(currentNodetow.value)
+                    currentNodetow = currentNodetow.next
+                }
+            }
+        } else {
+            for (let i = 0; i < list2.length; i++) {
+                this.append(currentNodetow.value)
+                currentNodetow = currentNodetow.next
+                if (i < list1.length) {
+                    this.append(currentNodeOne.value)
+                    currentNodeOne = currentNodeOne.next
+                }
+            }
+        }
+        return this
+    }
 }
-
-
 
 module.exports = Linkedlist
