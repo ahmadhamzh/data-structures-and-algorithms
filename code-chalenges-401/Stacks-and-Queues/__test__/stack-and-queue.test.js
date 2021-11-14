@@ -1,7 +1,7 @@
 'use strict'
 const Stack = require('../lib/stack');
 const Queue = require('../lib/queues');
-// const Node = require('../lib/Node');
+const pesudoQueue = require('../lib/pesudoqueue')
 
 describe('check for indesx.js', ()=>{
 
@@ -77,15 +77,6 @@ describe('check for indesx.js', ()=>{
         expect(newQueue.peek()).toEqual(newQueue.front.value)
     })
     
-    test('Can successfully empty a queue after multiple dequeues', () => {
-        const newQueue = new Queue
-        newQueue.enqueue(1)
-        newQueue.enqueue(2)
-        newQueue.dequeue()
-        newQueue.dequeue()
-        expect(newQueue.length).toEqual(0)
-    })
-    
     test('Can successfully instantiate an empty queue', () => {
         const newQueue = new Queue
         expect(newQueue.length).toEqual(0)
@@ -95,14 +86,30 @@ describe('check for indesx.js', ()=>{
         const newQueue = new Queue
         expect(newQueue.peek()).toEqual('exception')
     })
-
-
-
-
-
-
-
-
+    
+    test('check to creat empty pesudo queue', () => {
+        const newPesudo = new pesudoQueue
+        expect(newPesudo.stack1.length).toEqual(0)
+    })
+    
+    test('check to add multi value to pesudo queue', () => {
+        const newPesudo = new pesudoQueue
+        newPesudo.enqueue(1)
+        newPesudo.enqueue(2)
+        newPesudo.enqueue(3)
+        expect(newPesudo.stack1.length).toEqual(3)
+    })
+    
+    test('check to dequeue multi value to pesudo queue', () => {
+        const newPesudo = new pesudoQueue
+        newPesudo.enqueue(1)
+        newPesudo.enqueue(2)
+        newPesudo.enqueue(3)
+        newPesudo.dequeue()
+        newPesudo.dequeue()
+        expect(newPesudo.stack1.length).toEqual(1)
+    })
+    
 
 
 })

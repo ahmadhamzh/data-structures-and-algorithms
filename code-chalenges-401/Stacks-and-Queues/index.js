@@ -2,16 +2,19 @@
 
 const Stack = require('./lib/stack');
 const Queues = require('./lib/queues')
+const PesudoQueue = require('./lib/pesudoqueue')
 
 const newStack = new Stack
 const newQueues = new Queues
-
-newQueues.enqueue(1)
-newQueues.enqueue(2)
-newQueues.enqueue(3)
-newQueues.enqueue(4)
+const pesudoQueue = new PesudoQueue
 
 
-console.log(newQueues);
-newQueues.dequeue()
-console.log(newQueues);
+pesudoQueue.enqueue(1)
+pesudoQueue.enqueue(2)
+pesudoQueue.enqueue(3)
+pesudoQueue.dequeue()
+
+
+console.log(pesudoQueue.stack1);
+console.log(newQueues.peek());
+
