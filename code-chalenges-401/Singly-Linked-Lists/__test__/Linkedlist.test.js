@@ -1,7 +1,6 @@
 'use strict'
 
 
-const { expect } = require('@jest/globals');
 const Linkedlist = require('../lib/Linkedlist');
 
 describe('linkedlist checking', () => {

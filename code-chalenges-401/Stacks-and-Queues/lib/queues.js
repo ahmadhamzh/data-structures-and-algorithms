@@ -34,7 +34,7 @@ class Queues {
     }
     
     peek(){
-        if (!this.front.next) {
+        if (!this.front) {
             return 'exception'            
         }
         return this.front.value
