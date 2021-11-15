@@ -11,9 +11,9 @@ methods in the class :
 ![animal shelter whiteboard](/home/ahmad/301/data-structures-and-algorithms/code-chalenges-401/Stacks-and-Queues/animal-shelter/animal-shelter.jpg)
 
 ### links : 
-* link to Animal shelter dir :  
+* link to Animal shelter dir :  https://github.com/ahmadhamzh/data-structures-and-algorithms/tree/main/code-chalenges-401/Stacks-and-Queues/animal-shelter
 
-* link to whiteboard :
+* link to whiteboard : https://github.com/ahmadhamzh/data-structures-and-algorithms/blob/main/code-chalenges-401/Stacks-and-Queues/animal-shelter/animal-shelter.jpg
 
 
 
