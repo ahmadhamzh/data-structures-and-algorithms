@@ -45,6 +45,6 @@ We will need to:
 
 ### links : 
 
-* link to Animal shelter dir :  
+* link to stack-queue-brackets dir :  https://github.com/ahmadhamzh/data-structures-and-algorithms/tree/main/code-chalenges-401/Stacks-and-Queues/stack-queue-brackets 
 
-* link to whiteboard : 
+* link to whiteboard : https://github.com/ahmadhamzh/data-structures-and-algorithms/blob/main/code-chalenges-401/Stacks-and-Queues/stack-queue-brackets/validate%20brackets.jpg
