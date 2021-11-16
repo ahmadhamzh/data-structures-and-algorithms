@@ -3,6 +3,7 @@ const Stack = require('../lib/stack');
 const Queue = require('../lib/queues');
 const pesudoQueue = require('../lib/pesudoqueue');
 const AnimalShelter = require('../animal-shelter/animal-shelter')
+const validateBrackets = require('../stack-queue-brackets/stack-queue-brackets')
 
 describe('check for indesx.js', () => {
 
@@ -131,5 +132,17 @@ describe('check for indesx.js', () => {
         expect(animalShelter.cats.length).toEqual(1)
     })
 
-
+    test('check for true strin case', () => {
+        let str = '(){[]}'        
+        expect(validateBrackets(str)).toEqual(true)
+    })
+    
+    test('check for empty string', () => {        
+        expect(validateBrackets('')).toEqual(false)
+    })
+    
+    test('check for false strin case', () => {
+        let str = '(){[]'        
+        expect(validateBrackets(str)).toEqual(false)
+    })    
 })
