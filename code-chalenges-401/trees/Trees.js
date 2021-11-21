@@ -43,6 +43,18 @@ class Binarytree {
         return arrOfNudes
     }
 
+    findMaximum() {
+        if (this.isEmpty()) { return 'tree is empty' };
+        let maxNum = this.root.value
+        function _walkingThrough(node) {
+            if (node.value > maxNum){maxNum = node.value}
+            if (node.left) { _walkingThrough(node.left) }
+            if (node.right) { _walkingThrough(node.right) }
+        }
+        _walkingThrough(this.root)
+        return maxNum
+    }
+
     isEmpty() {
         return this.root === null
     }
