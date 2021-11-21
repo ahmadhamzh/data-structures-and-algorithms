@@ -15,3 +15,5 @@ Find the maximum value stored in the tree. You can assume that the values stored
 
 directory link in github : https://github.com/ahmadhamzh/data-structures-and-algorithms/tree/main/code-chalenges-401/trees 
 
+link to the whitboard image :  https://github.com/ahmadhamzh/data-structures-and-algorithms/blob/main/code-chalenges-401/trees/find%20maximum.jpg
+
