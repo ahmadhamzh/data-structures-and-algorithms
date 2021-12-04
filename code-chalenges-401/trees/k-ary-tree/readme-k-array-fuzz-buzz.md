@@ -16,9 +16,9 @@ If the value is not divisible by 3 or 5, simply turn the number into a String.
 
 ### Links 
 
-directory link in github : https://github.com/ahmadhamzh/data-structures-and-algorithms/tree/main/code-chalenges-401/trees 
+directory link in github : https://github.com/ahmadhamzh/data-structures-and-algorithms/tree/main/code-chalenges-401/trees/k-ary-tree
 
-link to the whitboard image :  https://github.com/ahmadhamzh/data-structures-and-algorithms/blob/main/code-chalenges-401/trees/find%20maximum.jpg
+link to the whitboard image :  https://github.com/ahmadhamzh/data-structures-and-algorithms/blob/main/code-chalenges-401/trees/k-ary-tree/Fuzz-Buzz-tree.jpg
 
 ----
 
