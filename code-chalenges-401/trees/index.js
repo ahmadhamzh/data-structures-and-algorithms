@@ -3,11 +3,7 @@
 const Node = require('./Node');
 const { Binarytree, BinarySearchtree } = require('./Trees')
 
-const binarySearchtree = new BinarySearchtree(new Node(20))
-binarySearchtree.add(30)
-binarySearchtree.add(10)
-binarySearchtree.add(25)
-binarySearchtree.add(12)
-binarySearchtree.add(15)
+const binarytree = new Binarytree(new Node(10,new Node(15,new Node(8),new Node(6)),new Node(12,new Node(8),new Node(19))))
+        
 
-console.log(binarySearchtree.add(15));
+console.log(binarytree.breadthFirst());

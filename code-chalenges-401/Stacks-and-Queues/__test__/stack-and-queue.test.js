@@ -69,7 +69,8 @@ describe('check for indesx.js', () => {
         newQueue.enqueue(1)
         newQueue.enqueue(2)
         newQueue.dequeue()
-        expect(newQueue.length).toEqual(1)
+        newQueue.dequeue()
+        expect(newQueue.isEmpty()).toEqual(true)
     })
 
     test('Can successfully peek into a queue, seeing the expected value', () => {

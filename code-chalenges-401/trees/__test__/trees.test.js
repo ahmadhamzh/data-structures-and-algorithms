@@ -71,6 +71,18 @@ describe('check for trees', () => {
         // expect(binarytree.postOrder()).toEqual([8,6,15,8,19,12,10])
         expect(binarytree.findMaximum()).toEqual('tree is empty')
     })
-
-
+    
+    test('Can successfully return array of value in breath first in the tree', () => {        
+        const binarytree = new Binarytree(new Node(10,new Node(15,new Node(8),new Node(6)),new Node(12,new Node(8),new Node(19))))
+        
+        // expect(binarytree.postOrder()).toEqual([8,6,15,8,19,12,10])
+        expect(binarytree.breadthFirst()).toEqual([10,15,12,8,6,8,19])
+    })
+    
+    test('Can successfully return tree is empty if the tree is empty', () => {        
+        const binarytree = new Binarytree
+        
+        // expect(binarytree.postOrder()).toEqual([8,6,15,8,19,12,10])
+        expect(binarytree.breadthFirst()).toEqual('its an empty tree')
+    })
 })
