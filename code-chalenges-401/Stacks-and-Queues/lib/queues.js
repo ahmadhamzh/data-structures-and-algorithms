@@ -23,14 +23,18 @@ class Queues {
     }
 
     dequeue(){
-        if (!this.front.next) {
+        if (this.front.value === null) {
             return 'exception'
         }
         let temp = this.front
         this.front = this.front.next
         temp.next = null
         this.length -= 1 
-        return this.front.value
+        if (this.isEmpty()) {
+            this.rear = null
+            return null
+        }
+        return this.front
     }
     
     peek(){

@@ -1,6 +1,7 @@
 'use strict'
 
 const Node = require('./Node');
+const Queue = require('../Stacks-and-Queues/lib/queues')
 
 class Binarytree {
     constructor(root = null) {
@@ -53,6 +54,20 @@ class Binarytree {
         }
         _walkingThrough(this.root)
         return maxNum
+    }
+
+    breadthFirst(){
+        if (!this.root){return 'its an empty tree'}
+        let arr =[]
+        let queue = new Queue
+        queue.enqueue(this.root)
+        while (!queue.isEmpty()) {
+            arr.push(queue.front.value.value)
+            if(queue.front.value.left){queue.enqueue(queue.front.value.left)}
+            if(queue.front.value.right){queue.enqueue(queue.front.value.right)}
+            queue.dequeue()
+        }
+        return arr
     }
 
     isEmpty() {
