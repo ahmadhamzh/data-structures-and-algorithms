@@ -4,4 +4,4 @@
 
 ## whiteboard
 
-![whiteboard img](array-insert-shift/array-shift-insert.jpg)
+![whiteboard img](./array-shift-insert.jpg)
