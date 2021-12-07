@@ -1,5 +1,3 @@
-o(n*logn)
-o(n)
 ## Merge Sort
 
 the merging sort is basicly divide the array into tow array and each aray dividd to to array again til it length become one then start to compain each tow number togother again and sort them and then do it again with the compain array til you reach all the data in all arrays
