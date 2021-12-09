@@ -2,7 +2,7 @@
 const Node = require('./Node')
 
 class Linkedlist {
-    constructor(value) {
+    constructor() {
         this.head = null,
             this.tail = null,
             this.length = 0
@@ -17,7 +17,6 @@ class Linkedlist {
             this.length++
             return this;
         } else {
-            // const newNode = new Node(value);
             this.tail.next = newNode;
             this.tail = newNode;
             this.length++
@@ -43,6 +42,41 @@ class Linkedlist {
         return boolean;
     }
 
+    includingObject(key) {
+
+        let boolean = false
+        let curenteNode = this.head;
+        while (curenteNode.next) {
+            let nodeKey = Object.keys(curenteNode.value)
+            if (nodeKey[0] === key) {
+                boolean = true
+            }
+            curenteNode = curenteNode.next
+        };
+        let nodeKey = Object.keys(this.tail.value)
+        if (nodeKey[0] === key) {
+            boolean = true
+        }
+        return boolean;
+    }
+ 
+
+    getDataObject(key) {
+
+        let curenteNode = this.head;
+        while (curenteNode.next) {
+            let nodeKey = Object.keys(curenteNode.value)
+            if (nodeKey[0] === key) {
+                return curenteNode.value[key]
+            }
+            curenteNode = curenteNode.next
+        };
+        let nodeKey = Object.keys(this.tail.value)
+        if (nodeKey[0] === key) {
+            return this.tail.value[key]
+        }
+
+    }
 
 
     toString() {
@@ -52,13 +86,13 @@ class Linkedlist {
             return console.error('the Linked list is empty')
         }
         let curenteNode = this.head;
-        // console.log(curenteNode.value);
+
         while (curenteNode.next) {
-            // console.log(curenteNode.value);
+
             valuesArr.push(`{${curenteNode.value}} -> `)
             curenteNode = curenteNode.next
         };
-        // console.log(curenteNode.value);
+
         valuesArr.push(`{${curenteNode.value}} -> {null} `)
 
         return valuesArr.join('')
