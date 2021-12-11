@@ -8,7 +8,7 @@ methods in the class :
 
 ## Whiteboard  
  
-![animal shelter whiteboard](/home/ahmad/301/data-structures-and-algorithms/code-chalenges-401/Stacks-and-Queues/animal-shelter/animal-shelter.jpg)
+![animal shelter whiteboard](animal-shelter.jpg)
 
 ### links : 
 * link to Animal shelter dir :  https://github.com/ahmadhamzh/data-structures-and-algorithms/tree/main/code-chalenges-401/Stacks-and-Queues/animal-shelter
