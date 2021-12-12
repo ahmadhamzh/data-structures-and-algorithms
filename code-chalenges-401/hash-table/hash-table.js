@@ -18,7 +18,7 @@ class Hashtable {
 
     add(key, value) {
 
-        const payLoad = { [key]: value };
+        const payLoad =  value ;
         const hashedKey = this.hash(key)
         if (!this.arr[hashedKey]) {
             this.arr[hashedKey] = new Linkedlist()
