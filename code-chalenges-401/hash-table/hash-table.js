@@ -10,8 +10,8 @@ class Hashtable {
 
     hash(key) {
 
-        const hashedKey = key.split('').reduce((p, n) => p + n.charCodeAt(0), 0);
-        const indexValue = ((hashedKey * 525) % this.size)
+        // const hashedKey = key.split('').reduce((p, n) => p + n.charCodeAt(0), 0);
+        const indexValue = ((key * 525) % this.size)
         return indexValue
 
     }
@@ -37,7 +37,7 @@ class Hashtable {
     get(key) {
         const hashedKey = this.hash(key)
         if (this.arr[hashedKey]) {
-            return this.arr[hashedKey].getDataObject(key)
+            return this.arr[hashedKey].head
         }
 
     }
